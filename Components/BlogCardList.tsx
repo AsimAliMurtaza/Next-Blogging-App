@@ -49,7 +49,7 @@ const Content = {
       "Sport includes all forms of competitive physical activity or games which, through casual or organized participation, at least in part aim to use, maintain or improve physical ability and skills while providing enjoyment to participants, and in some cases, entertainment for spectators.",
     buttonText: "Read More",
     detailedDescription: "Sports are an essential part of a healthy lifestyle, offering numerous physical and mental benefits. Engaging in sports helps in maintaining physical fitness, building strength and endurance, and improving coordination and flexibility. It also promotes social interaction, teamwork, and leadership skills. Regular participation in sports can boost self-confidence, reduce stress, and enhance mood by releasing endorphins. Whether you enjoy individual sports like running or swimming or team sports like soccer or basketball, there are countless ways to stay active and have fun. Embrace the spirit of sportsmanship and challenge yourself to reach new heights.",
-    date: "2021-06-01, 10:00 AM",
+    date: "2021-06-01, 10:03 AM",
   },
 };
 
