@@ -15,7 +15,7 @@ import {
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 type Blog = {
-  key: string;
+  key: number;
   title: string;
   description: string;
   buttonText: string;

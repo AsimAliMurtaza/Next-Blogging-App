@@ -13,7 +13,7 @@ import {
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
-const truncateText = (text, length) => {
+const truncateText = ({ text, length }: { text: string; length: number }): string => {
   if (text.length <= length) {
     return text;
   }
@@ -24,6 +24,7 @@ export default function BlogStack({
   params,
 }: {
   params: {
+    key: number;
     title: string;
     description: string;
     detailedDescription: string;
@@ -34,8 +35,8 @@ export default function BlogStack({
     author: string;
   };
 }) {
-  const truncatedDescription = truncateText(params.description, 70);
 
+  const truncatedDescription = truncateText({ text: params.description, length: 50 });
 
   const router = useRouter();
 

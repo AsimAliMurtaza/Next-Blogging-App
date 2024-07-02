@@ -15,14 +15,14 @@ export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
   };
 
   const clearFormData = () => {
     setEmail("");
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
 
     if (!email) {
@@ -85,7 +85,7 @@ export default function Newsletter() {
             colorScheme="teal"
             variant="ghost"
             marginTop="10px"
-            onClick={handleSubmit}
+            onClick={handleSubmit as any}
           >
             Subscribe
           </Button>

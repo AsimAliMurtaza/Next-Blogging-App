@@ -9,13 +9,23 @@ import Newsletter from "@/Components/Newsletter";
 const BlogPost = () => {
   const router = useRouter();
   const { title, state } = router.query;
+  // Define a type for blog data to ensure type safety
+  interface Blog {
+    author: string;
+    date: string;
+    title: string;
+    description: string;
+    detailedDescription: string;
+    link: string;
+    altName: string;
+  }
 
-  const [blogData, setBlogData] = useState(null);
+  const [blogData, setBlogData] = useState<Blog | null>(null);
 
   useEffect(() => {
     if (state) {
       const parsedState = Array.isArray(state) ? state[0] : state;
-      const blog = JSON.parse(decodeURIComponent(parsedState));
+      const blog = JSON.parse(decodeURIComponent(parsedState)) as Blog; // Ensure correct parsing
       setBlogData(blog);
     }
   }, [state]);
@@ -28,6 +38,7 @@ const BlogPost = () => {
     );
   }
 
+    
   return (
     <RootLayout>
       <Container maxW="container.xl" paddingX={{ base: 5, md: 10 }} paddingTop={2}>
