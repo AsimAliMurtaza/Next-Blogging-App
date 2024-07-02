@@ -2,7 +2,7 @@
 "use client";
 import "../app/globals.css";
 
-import Home from "@/Pages/Home";
+import Home from "@/pages/Home";
 
 export default function App() {
   return (

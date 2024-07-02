@@ -11,6 +11,8 @@ import {
   Image,
 } from "@chakra-ui/react";
 
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
+
 const truncateText = (text, length) => {
   if (text.length <= length) {
     return text;
@@ -24,14 +26,23 @@ export default function BlogStack({
   params: {
     title: string;
     description: string;
+    detailedDescription: string;
     buttonText: string;
     link: string;
     altName: string;
     date: string;
+    author: string;
   };
 }) {
   const truncatedDescription = truncateText(params.description, 70);
 
+
+  const router = useRouter();
+
+  const onClickHandler = () => {
+    const state = encodeURIComponent(JSON.stringify(params));
+    router.push(`/blog/${encodeURIComponent(params.title)}?state=${state}`);
+  };
   return (
     <Container maxW="container.xl" paddingTop={10}>
       <Card height="100%">
@@ -43,8 +54,10 @@ export default function BlogStack({
           src={params.link}
           alt={params.altName}
         />
-        <CardHeader >
-          <Text fontWeight={1} fontSize={12} color="black">{params.date}</Text>
+        <CardHeader>
+          <Text fontWeight={1} fontSize={12} color="black">
+            {params.date}, {params.author}
+          </Text>
         </CardHeader>
 
         <CardHeader paddingBottom="0" marginTop={-10}>
@@ -54,7 +67,7 @@ export default function BlogStack({
           <Text>{truncatedDescription}</Text>
         </CardBody>
         <CardFooter display="flex" justifyContent="center" alignItems="center">
-          <Button variant="outline" padding={5} marginX={5}>
+          <Button variant="outline" padding={5} marginX={5} onClick={onClickHandler}>
             {params.buttonText}
           </Button>
         </CardFooter>

@@ -28,7 +28,7 @@ const DrawerExample = ({ isOpen, onClose }) => {
             button
             key={index}
             component={Link}
-            href={text === "Home" ? "/" : `/${text.toLowerCase()}`}
+            href={text === "Home" ? "/" : "/"}
             onClick={onClose}
             sx={{
               "&:hover": {

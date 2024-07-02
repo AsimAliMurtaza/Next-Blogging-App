@@ -24,7 +24,7 @@ const Header = () => {
         </div>
         {/* Title */}
         <div className="text-2xl font-thin">
-          <Link href="/">NextJS</Link>
+          <Link href="/">NextJS App</Link>
         </div>
         <div className="flex justify-center space-x-4">
           <Link href="https://facebook.com">
