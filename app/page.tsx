@@ -1,8 +1,9 @@
 // app/page.tsx
 "use client";
-import "../app/globals.css";
+import "@/app/globals.css";
 
-import Home from "@/pages/Home";
+import Home from '@/pages/Home';
+
 
 export default function App() {
   return (

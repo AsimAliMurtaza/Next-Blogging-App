@@ -30,13 +30,10 @@ export default function Newsletter() {
       return;
     }
 
-    // Reset error message if email is provided
     setError("");
 
-    // Proceed with your subscription logic here
-    showToast(); // Assuming showToast is a function to display a toast or message
+    showToast();
     clearFormData();
-
   };
   const showToast = () => {
     toast({
@@ -93,4 +90,4 @@ export default function Newsletter() {
       </Box>
     </Container>
   );
-};
+}

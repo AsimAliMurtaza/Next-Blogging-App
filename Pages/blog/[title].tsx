@@ -2,14 +2,14 @@ import { Box, Container, Heading, Image, Spinner } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import RootLayout from "@/app/layout";
-import "../../app/globals.css";
+import "@/app/globals.css";
 import { Center } from "@chakra-ui/react";
 import Newsletter from "@/Components/Newsletter";
 
 const BlogPost = () => {
   const router = useRouter();
   const { title, state } = router.query;
-  // Define a type for blog data to ensure type safety
+  
   interface Blog {
     author: string;
     date: string;
