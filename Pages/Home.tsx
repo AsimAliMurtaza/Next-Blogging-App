@@ -1,4 +1,3 @@
-"use client";
 import BlogCardlist from "@/Components/BlogCardList";
 import "@/app/globals.css";
 import BlogStackList from "@/Components/BlogStackList";

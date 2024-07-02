@@ -17,10 +17,11 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "Components/Drawer.jsx", "Components/Header.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "Components/Drawer.jsx", "Components/Header.tsx", "pages/Home.tsx"],
   "exclude": ["node_modules"]
 }
